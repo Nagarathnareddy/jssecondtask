@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+   
+</head>
+<body style="background-color: rgb(201, 181, 181);">
+    
+    <div id="ssc">
+    <h1 style="text-align: center;">A.P Examination Secondary Education Board</h1>
+    <h2 style="text-align: center;">SSC Examination Results</h2>
+    </div>
+    <div id="nare">
+       <label>Name</label> <input type="text">
+       <br>
+       <label>Register Number</label><input type="text">
+       <br>
+       <button>Submit</button>
+    </div>
+    <br>
+    <fieldset>
+
+    <table id="tb">
+        <tr>
+          <th>S.No</th>  
+          <th>Subjects</th>
+          <th>Marks</th>
+        </tr>
+
+        <tr>
+            <td>1</td>
+            <td>English</td>
+
+       <td><label>Marks</label><input id="engMarks" type="text"><button onclick="engMarks()">Result</button></td>
+       <h1 id="results">Results</h1>    
+        </tr>
+
+        <tr>
+            <td>2</td>
+            <td>Telugu</td>
+            
+       <td><label>Marks</label><input id="telMarks" type="text"><button onclick="telMarks()">Result</button></td>
+            
+           
+            
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Hindhi</td>
+           
+       <td><label>Marks</label><input id="hinMarks"  type="text"><button onclick="hinMarks()">Result</button></td>
+           
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Maths</td>
+           
+       <td><label>Marks</label><input id="matMarks"   type="text"><button onclick="matMarks()"> Result</button></td>
+            
+            
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Science</td>
+           
+       <td><label>Marks</label><input id="sciMarks"   type="text"><button onclick="sciMarks()">Result</button></td>
+            
+            
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>Social</td>
+            
+       <td><label>Marks</label><input id="socMarks"   type="text"><button onclick="socMarks()">Result</button></td>
+           
+        </tr>
+    </table>
+    
+    <button onclick="totalMarks()">Total Marks</button>
+    <label></label><input id="totalMarks" type="text">
+    <button onclick="telMarks()">Result</button>
+
+  
+    </fieldset>
+
+
+
+   <script>
+       
+       
+    
+      function engMarks()
+          {
+            let engMarks=document.getElementById("engMarks").value;
+            if (engMarks >= 35)
+            {
+                document.getElementById("results").innerHTML="Passed";
+                document.getElementById("results").style.color="green";
+            }
+            else 
+            {
+                document.getElementById("results").innerHTML="Failed";
+                document.getElementById("results").style.color="Red";
+            }
+          }
+              
+
+          function telMarks()
+          {
+            let telMarks=document.getElementById("telMarks").value;
+            if (telMarks >= 35)
+            {
+                document.getElementById("results").innerHTML="Passed";
+                document.getElementById("results").style.color="green";
+            }
+            else
+            {
+                document.getElementById("results").innerHTML="Failed";
+                document.getElementById("results").style.color="Red";
+            }
+          }
+
+
+          function hinMarks()
+          {
+            let hinMarks =document.getElementById("hinMarks").value;
+            if (hinMarks >= 35)
+            {
+                document.getElementById("results").innerHTML="Passed";
+                document.getElementById("results").style.color="green";
+            }
+            else
+            {
+                document.getElementById("results").innerHTML="Failed";
+                document.getElementById("results").style.color="Red";
+            }
+          }
+
+
+          function matMarks()
+          {
+            let matMarks=document.getElementById("matMarks").value;
+            if (matMarks >= 35)
+            {
+                document.getElementById("results").innerHTML="Passed";
+                document.getElementById("results").style.color="green";
+            }else
+            {
+                document.getElementById("results").innerHTML="Failed";
+                document.getElementById("results").style.color="Red";
+            }
+          }
+
+
+
+          function sciMarks()
+          {
+            let  sciMarks=document.getElementById("sciMarks").value;
+            if (sciMarks>= 35)
+            {
+                document.getElementById("results").innerHTML="Passed";
+                document.getElementById("results").style.color="green";
+            }
+            else
+            {
+                document.getElementById("results").innerHTML="Failed";
+                document.getElementById("results").style.color="Red";
+            }
+          }
+
+          function socMarks()
+          {
+            let socMarks=document.getElementById("socMarks").value;
+            if (socMarks >= 35)
+            {
+                document.getElementById("results").innerHTML="Passed";
+                document.getElementById("results").style.color="green";
+            }
+            else
+            {
+                document.getElementById("results").innerHTML="Failed";
+                document.getElementById("results").style.color="Red";
+            }
+        }
+
+        function totalMarks()
+        {
+
+    
+
+    var engMarks = parseInt(document.getElementById("engMarks").value);
+    var telMarks = parseInt(document.getElementById("telMarks").value);
+    var hinMarks = parseInt(document.getElementById("hinMarks").value);
+    var matMarks = parseInt(document.getElementById("matMarks").value);
+    var sciMarks = parseInt(document.getElementById("sciMarks").value);
+    var socMarks= parseInt(document.getElementById("socMarks").value);
+
+        // Calculating Total
+    var total = engMarks + telMarks+ hinMarks + matMarks +sciMarks+socMarks;
+         document.getElementById("totalMarks").value=total;
+        }
+    </script>
+    
+  
+</body>
+</html>
